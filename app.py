@@ -1,12 +1,10 @@
 import gradio as gr
 from interview_bank import QUESTIONS as INTERVIEW_BANK
+import random
 
-# A dummy mock bank of questions (In reality, import from interview_bank.py as required)
-INTERVIEW_BANK = [
-    {"question": "Tell me about a time you had to scale a system.", "keywords": ["database", "architecture", "load balancing"]},
-    {"question": "How do you handle conflict in a team?", "keywords": ["communication", "empathy", "resolution"]},
-    {"question": "Describe a time you failed.", "keywords": ["learned", "accountability", "improved"]}
-]
+# laoding the data from the database of interview_bank.py
+num_questions = min(3, len(INTERVIEW_BANK))
+INTERVIEW_BANK = random.sample(INTERVIEW_BANK, num_questions)
 
 current_question_idx = 0
 scorecard_data = []
