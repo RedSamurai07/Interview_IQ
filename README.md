@@ -5,7 +5,6 @@
 [![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![Gradio](https://img.shields.io/badge/UI-Gradio-FF7C00)](https://www.gradio.app/)
 [![LangGraph](https://img.shields.io/badge/Orchestration-LangGraph-1C3C3C)](https://langchain-ai.github.io/langgraph/)
-[![License](https://img.shields.io/badge/license-TBD-lightgrey)](#project-status)
 
 Interview IQ is a focused practice environment for software-engineering interviews. It combines a guided question bank, an interactive Gradio scorecard, deterministic communication checks, STAR-structure analysis, and an OpenRouter-backed evaluator agent.
 
@@ -123,8 +122,4 @@ Interview IQ is a working prototype and a foundation for a production-quality co
 ## Contributing
 
 Small, focused improvements are welcome. Before opening a pull request, keep changes scoped, add tests for new scoring behavior, and confirm that no secrets or generated Gradio state are included.
-
-## License
-
-No license has been selected yet. Until one is added, all rights are reserved.
 
