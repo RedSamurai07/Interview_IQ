@@ -16,7 +16,5 @@ response = client.chat.completions.create(
         max_tokens = 500,
         temperature = 0.3
 )
-
 print(response.choices[0].message.content)
-print(f"Model name: {response.model.name}")
-
+print(response.model)

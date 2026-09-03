@@ -1,1 +1,6 @@
+openai
+python-dotenv
 gradio
+langchain-core
+langchain-openai
+langgraph
