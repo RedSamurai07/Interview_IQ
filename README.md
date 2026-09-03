@@ -1,12 +1,12 @@
 # Interview IQ
 
-[Link]()
-
 > An AI-assisted mock interview coach that turns every answer into a measurable improvement loop.
 
 [![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![Gradio](https://img.shields.io/badge/UI-Gradio-FF7C00)](https://www.gradio.app/)
 [![LangGraph](https://img.shields.io/badge/Orchestration-LangGraph-1C3C3C)](https://langchain-ai.github.io/langgraph/)
+
+[Link]()
 
 Interview IQ is a focused practice environment for software-engineering interviews. It combines a guided question bank, an interactive Gradio scorecard, deterministic communication checks, STAR-structure analysis, and an OpenRouter-backed evaluator agent.
 
