@@ -23,9 +23,9 @@ Interview preparation often produces too little feedback and too much passive co
 
 The current Gradio flow uses mock feedback while the LangGraph evaluator is available as a separate end-to-end experiment. The architecture boundary is intentional: deterministic checks remain inspectable, while model-based coaching can evolve independently.
 
-![Interview IQ visual architecture](docs/interview-iq-architecture.png)
+[![Interview IQ visual architecture](docs/interview-iq-architecture.png)](docs/interview-iq.architecture.html)
 
-Explore the generated [visual architecture map](docs/interview-iq.architecture.html), or read the [architecture notes](docs/architecture.md) for component decisions and current limitations.
+Open the preview image to explore the [interactive Archify scenario](docs/interview-iq.architecture.html) in its black theme, or read the [architecture notes](docs/architecture.md) for component decisions and current limitations.
 
 ## Highlights
 
