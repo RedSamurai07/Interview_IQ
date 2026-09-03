@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Interview IQ Runtime Architecture",
+    "quality_profile": "showcase"
+  },
+  "layout": {
+    "mode": "grid",
+    "cols": 4,
+    "gapX": 48,
+    "gapY": 56,
+    "cellW": 220,
+    "cellH": 120
+  },
+  "components": [
+    {
+      "id": "candidate",
+      "type": "external",
+      "label": "Candidate",
+      "sublabel": "Interview answer",
+      "row": 1,
+      "col": 0
+    },
+    {
+      "id": "gradio-ui",
+      "type": "frontend",
+      "label": "Gradio workspace",
+      "sublabel": "app.py",
+      "row": 1,
+      "col": 1
+    },
+    {
+      "id": "question-bank",
+      "type": "backend",
+      "label": "Question bank",
+      "sublabel": "interview_bank.py",
+      "row": 0,
+      "col": 1
+    },
+    {
+      "id": "session-state",
+      "type": "database",
+      "label": "Session scorecard",
+      "sublabel": "In-memory state",
+      "row": 2,
+      "col": 1
+    },
+    {
+      "id": "analysis-tools",
+      "type": "backend",
+      "label": "Answer analysis tools",
+      "sublabel": "tools.py",
+      "size": [180, 60],
+      "row": 1,
+      "col": 2
+    },
+    {
+      "id": "langgraph-agent",
+      "type": "backend",
+      "label": "LangGraph evaluator",
+      "sublabel": "main.py",
+      "row": 1,
+      "col": 3
+    },
+    {
+      "id": "openrouter-model",
+      "type": "external",
+      "label": "OpenRouter model",
+      "sublabel": "OpenAI-compatible API",
+      "row": 0,
+      "col": 3
+    }
+  ],
+  "connections": [
+    {
+      "id": "candidate-submits",
+      "from": "candidate",
+      "to": "gradio-ui",
+      "label": "submit answer"
+    },
+    {
+      "id": "ui-loads-question",
+      "from": "question-bank",
+      "to": "gradio-ui",
+      "label": "serve prompt",
+      "labelDy": 24
+    },
+    {
+      "id": "ui-records-session",
+      "from": "gradio-ui",
+      "to": "session-state",
+      "label": "record answer",
+      "labelDy": 24
+    },
+    {
+      "id": "ui-runs-checks",
+      "from": "gradio-ui",
+      "to": "analysis-tools",
+      "label": "analyze answer"
+    },
+    {
+      "id": "agent-uses-tools",
+      "from": "langgraph-agent",
+      "to": "analysis-tools",
+      "label": "tool calls"
+    },
+    {
+      "id": "agent-queries-model",
+      "from": "langgraph-agent",
+      "to": "openrouter-model",
+      "label": "request coaching",
+      "labelDy": -24,
+      "labelDx": 64
+    },
+    {
+      "id": "model-returns-feedback",
+      "from": "openrouter-model",
+      "to": "langgraph-agent",
+      "label": "feedback",
+      "labelDy": 24,
+      "labelDx": -64
+    }
+  ]
+}

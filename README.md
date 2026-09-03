@@ -35,7 +35,7 @@ flowchart LR
 
 The current Gradio flow uses mock feedback while the LangGraph evaluator is available as a separate end-to-end experiment. The architecture boundary is intentional: deterministic checks remain inspectable, while model-based coaching can evolve independently.
 
-For the detailed component map and decisions, see [the architecture document](docs/architecture.md).
+Explore the generated [visual architecture map](docs/interview-iq.architecture.html), or read the [architecture notes](docs/architecture.md) for component decisions and current limitations.
 
 ## Highlights
 
