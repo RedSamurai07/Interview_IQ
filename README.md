@@ -21,18 +21,6 @@ Interview preparation often produces too little feedback and too much passive co
 
 ## Product Flow
 
-```mermaid
-flowchart LR
-	Candidate[Candidate answer] --> UI[Gradio interview workspace]
-	UI --> Bank[Question bank]
-	UI --> Checks[Communication checks]
-	Checks --> Score[Scorecard and feedback]
-	UI -. planned integration .-> Agent[LangGraph evaluator]
-	Agent --> Tools[Typed analysis tools]
-	Tools --> Agent
-	Agent --> Feedback[Coaching feedback]
-```
-
 The current Gradio flow uses mock feedback while the LangGraph evaluator is available as a separate end-to-end experiment. The architecture boundary is intentional: deterministic checks remain inspectable, while model-based coaching can evolve independently.
 
 ![Interview IQ visual architecture](docs/interview-iq-architecture.png)
