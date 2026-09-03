@@ -6,7 +6,7 @@
 [![Gradio](https://img.shields.io/badge/UI-Gradio-FF7C00)](https://www.gradio.app/)
 [![LangGraph](https://img.shields.io/badge/Orchestration-LangGraph-1C3C3C)](https://langchain-ai.github.io/langgraph/)
 
-[Link]()
+[Link](https://www.loom.com/share/e73216029b8342349d0e8fc7174ad01f)
 
 Interview IQ is a focused practice environment for software-engineering interviews. It combines a guided question bank, an interactive Gradio scorecard, deterministic communication checks, STAR-structure analysis, and an OpenRouter-backed evaluator agent.
 
